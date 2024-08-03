@@ -6,7 +6,7 @@ var myAppBar = AppBar(
   backgroundColor: Colors.grey[900],
 );
 var myDrawer = Drawer(
-  backgroundColor: Colors.grey[300],
+  backgroundColor: Color.fromARGB(255, 193, 62, 62),
   child: Column(
     children: [
       const DrawerHeader(

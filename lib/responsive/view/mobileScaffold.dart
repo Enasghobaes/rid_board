@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rid_board/core/widgets/app_drawer.dart';
+import 'package:rid_board/responsive/view/onbording.dart';
+import 'package:rid_board/responsive/view/singup_page.dart';
 
 class mobileScaffold extends StatefulWidget {
   const mobileScaffold({super.key});
@@ -18,23 +20,29 @@ class _mobileScaffoldState extends State<mobileScaffold> {
         body: Column(
           children: [
             if (!_islandscape)
-              Center(
-                child: Container(
-                  height: MediaQuery.of(context).size.height * 0.7,
-                  width: MediaQuery.of(context).size.width * 0.5,
-                  decoration: BoxDecoration(
-                      color: Colors.green,
-                      borderRadius: BorderRadius.circular(15)),
+              Expanded(
+                child: Center(
+                  child: Container(
+                    height: MediaQuery.of(context).size.height * 0.5,
+                    width: MediaQuery.of(context).size.width * 0.5,
+                    decoration: BoxDecoration(
+                        // color: Colors.green,
+                        borderRadius: BorderRadius.circular(15)),
+                    child: singup_page(),
+                  ),
                 ),
               ),
             if (_islandscape)
-              Center(
-                child: Container(
-                  height: MediaQuery.of(context).size.height * 0.2,
-                  width: MediaQuery.of(context).size.width * 0.7,
-                  decoration: BoxDecoration(
-                      color: Colors.green,
-                      borderRadius: BorderRadius.circular(15)),
+              Expanded(
+                child: Center(
+                  child: Container(
+                    height: MediaQuery.of(context).size.height * 0.2,
+                    width: MediaQuery.of(context).size.width * 0.7,
+                    decoration: BoxDecoration(
+                        // color: Colors.green,
+                        borderRadius: BorderRadius.circular(15)),
+                    child: singup_page(),
+                  ),
                 ),
               ),
           ],
